@@ -2,15 +2,17 @@
 import os
 import requests
 import json
+from Backend.types import PromptRequest, prompt_type_mapping
 
 
 
-def paraphrase(text):
-    print("selected_text:{}".format(text))
+def handle_prompt_request(request: PromptRequest):   
     try:
+        prompt = f"{prompt_type_mapping.get(request.prompt_type)} : {request.text}"
+        print("selected_prompt:{}".format(prompt))
         payload = {
             "model": "llama3",
-            "prompt": f"Paraphrase the text in a professional way : {text}",
+            "prompt": prompt,
             "stream": False
         }
 
