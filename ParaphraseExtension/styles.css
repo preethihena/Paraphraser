@@ -1,0 +1,86 @@
+/* Styling the chat box */
+#resultBox {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 300px;
+    max-height: 400px;
+    background-color: white;
+    border: 1px solid lightgray;
+    padding: 10px;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+    overflow-y: auto;
+}
+
+#resultBox .chat-body {
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+/* Ensure buttons are hidden until hover */
+#resultBox .chat-log div:hover .icon-button {
+    display: inline-block;
+}
+
+#resultBox .icon-button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    display: none;
+    margin-left: 5px;
+}
+
+#resultBox .icon-button:hover {
+    color: blue;
+}
+
+/* Chat log container */
+#chatLog {
+    margin-top: 10px;
+    border-top: 1px solid lightgray;
+    padding-top: 10px;
+}
+
+/* Chat input */
+#chatInput {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+}
+
+/* Action buttons */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 20px;
+    left: calc(50% - 150px); /* Center align the button container */
+    width: 300px;
+    background-color: white;
+    padding: 10px;
+    border-top: 1px solid lightgray;
+}
+
+.button-container button {
+    background-color: lightorange;
+    border: 1px solid lightgray;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-container button:hover {
+    background-color: orange;
+}
+
+/* Close button */
+.close-button {
+    float: right;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
