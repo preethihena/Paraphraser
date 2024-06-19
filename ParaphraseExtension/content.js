@@ -35,6 +35,15 @@ function displayText(action, text) {
         closeButton.onclick = () => document.body.removeChild(box);
         box.appendChild(closeButton);
 
+        // Chat log container
+        const chatLog = document.createElement('div');
+        chatLog.id = 'chatLog';
+        chatLog.style.marginTop = '10px';
+        chatLog.style.maxHeight = '300px';
+        chatLog.style.overflowY = 'auto';
+        box.appendChild(chatLog);
+
+
         // Chat input
         const chatInput = document.createElement('input');
         chatInput.type = 'text';
@@ -104,14 +113,6 @@ function displayText(action, text) {
         buttonContainer.appendChild(paraphraseButton);
 
         box.appendChild(buttonContainer);
-
-        // Chat log container
-        const chatLog = document.createElement('div');
-        chatLog.id = 'chatLog';
-        chatLog.style.marginTop = '10px';
-        chatLog.style.maxHeight = '300px';
-        chatLog.style.overflowY = 'auto';
-        box.appendChild(chatLog);
 
         document.body.appendChild(box);
     }
